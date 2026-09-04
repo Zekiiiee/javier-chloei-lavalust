@@ -50,14 +50,24 @@
         }
 
         .hero {
-            width: 84%;
-            max-width: 1100px;
-            margin: 80px auto;
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
+    width: 84%;
+    max-width: 1200px;
+    margin: 90px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero > div:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero .card {
+    flex: 0 0 400px;
+    width: 400px;
+}
 
         .tag {
             display: inline-block;
@@ -81,27 +91,28 @@
         }
 
         .description {
-            color: #999;
-            font-size: 17px;
-            line-height: 1.7;
-            margin-top: 25px;
-            max-width: 600px;
-        }
+    color: #999;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-top: 25px;
+    max-width: 500px;
+}
 
         .buttons {
-            margin-top: 35px;
-        }
-
+    margin-top: 35px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
         .btn {
-            display: inline-block;
-            padding: 13px 22px;
-            margin-right: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
 
         .primary {
             background: #ff6fae;
@@ -123,12 +134,12 @@
         }
 
         .card {
-            background: #15151d;
-            border: 1px solid #292933;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-        }
+    background: #15151d;
+    border: 1px solid #292933;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
 
         .card-header {
             display: flex;
@@ -181,32 +192,21 @@
             font-size: 12px;
         }
 
-        @media (max-width: 800px) {
-            .hero {
-                grid-template-columns: 1fr;
-                margin-top: 50px;
-            }
-
-            nav {
-                padding: 20px;
-            }
-
-            nav div:last-child {
-                display: none;
-            }
-        }
+        
     </style>
 </head>
 
 <body>
 
+
 <nav>
     <div class="logo">Just Klowi Things</div>
 
     <div>
-        <a href="/student">Home</a>
-        <a href="/student/profile">Profile</a>
-    </div>
+    <a href="/student">Home</a>
+    <a href="/student/profile">Profile</a>
+    <a href="/users">Users</a>
+</div>
 </nav>
 
 <section class="hero">
@@ -225,16 +225,15 @@
 
         <div class="buttons">
 
-            <a class="btn primary" href="/student/profile">
-                View My Profile →
-            </a>
+    <a class="btn primary" href="/student/profile">
+        View My Profile →
+    </a>
 
-            <a class="btn secondary" href="#contact">
-                Contact Me
-            </a>
+    <a class="btn secondary" href="/users">
+        View Users →
+    </a>
 
-        </div>
-    </div>
+</div>
 
 
     <div class="card">
