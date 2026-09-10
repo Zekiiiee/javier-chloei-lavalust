@@ -199,6 +199,7 @@
 <body>
 
 
+
 <nav>
     <div class="logo">Just Klowi Things</div>
 
@@ -232,6 +233,10 @@
     <a class="btn secondary" href="/users">
         View Users →
     </a>
+
+<a class="btn secondary" href="/products">
+    Product Management →
+</a>
 
 </div>
 
