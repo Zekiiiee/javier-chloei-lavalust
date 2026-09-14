@@ -383,19 +383,19 @@
 
         <div>
 
-            <a href="http://127.0.0.1:3000/student">
+            <a href="<?= base_url('student'); ?>">
                 Home
             </a>
 
-            <a href="http://127.0.0.1:3000/student/profile">
+            <a href="<?= base_url('student/profile'); ?>">
                 Profile
             </a>
 
-            <a href="http://127.0.0.1:3000/products">
+            <a href="<?= base_url('products'); ?>">
                 Products
             </a>
 
-            <a href="http://127.0.0.1:3000/logout">
+            <a href="<?= base_url('logout'); ?>">
                 Logout
             </a>
 
@@ -436,7 +436,7 @@
             <div>
 
                 <a
-                    href="http://127.0.0.1:3000/products/create"
+                    href="<?= base_url('products/create'); ?>"
                     class="add-button"
                 >
                     + Add Product
@@ -558,7 +558,7 @@
 
 
                                             <a
-                                                href="http://127.0.0.1:3000/products/edit/<?= $product['id']; ?>"
+                                                href="<?= base_url('products/edit/' . $product['id']); ?>"
                                                 class="action-btn edit"
                                             >
                                                 Edit
@@ -566,7 +566,7 @@
 
 
                                             <a
-                                                href="http://127.0.0.1:3000/products/delete/<?= $product['id']; ?>"
+                                                href="<?= base_url('products/delete/' . $product['id']); ?>"
                                                 class="action-btn delete"
                                                 onclick="return confirm('Are you sure you want to delete this product?');"
                                             >
@@ -621,7 +621,7 @@
 
         <div class="bottom-links">
 
-            <a href="http://127.0.0.1:3000/student">
+            <a href="<?= base_url('student'); ?>">
                 ← Back to Home
             </a>
 
