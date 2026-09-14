@@ -1,15 +1,13 @@
 <?php
 defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
-/**
- * ------------------------------------------------------------------
- * URI ROUTING
- * ------------------------------------------------------------------
- */
+// log in
 
 /** @var object $router **/
 
 $router->get('/', 'LoginController::index');
+
+//student
 
 $router->get('/student', 'StudentController::index');
 
@@ -19,11 +17,9 @@ $router->get('/student/profile', 'StudentController::profile')
 $router->get('/users', 'UsersController::index');
 
 
-/*
-|--------------------------------------------------------------------------
-| PRODUCT ROUTES
-|--------------------------------------------------------------------------
-*/
+
+
+//produvt
 
 $router->get('/products', 'ProductController::index');
 
