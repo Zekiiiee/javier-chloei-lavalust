@@ -228,9 +228,9 @@
     </div>
 
     <div>
-        <a href="http://127.0.0.1:3000/products">Products</a>
-        <a href="http://127.0.0.1:3000/student">Home</a>
-        <a href="http://127.0.0.1:3000/logout">Logout</a>
+        <a href="https://javier-chloei-lavalust.onrender.com/products">Products</a>
+        <a href="https://javier-chloei-lavalust.onrender.com/student">Home</a>
+        <a href="https://javier-chloei-lavalust.onrender.com/logout">Logout</a>
     </div>
 </nav>
 
@@ -254,7 +254,10 @@
             <span class="status">● Ready</span>
         </div>
 
-        <form action="http://127.0.0.1:3000/products/store" method="POST">
+        <form
+            action="https://javier-chloei-lavalust.onrender.com/products/store"
+            method="POST"
+        >
 
             <div class="form-group">
                 <label for="product_name">Product Name</label>
@@ -316,7 +319,7 @@
                 </button>
 
                 <a
-                    href="http://127.0.0.1:3000/products"
+                    href="https://javier-chloei-lavalust.onrender.com/products"
                     class="btn secondary"
                 >
                     Cancel

@@ -21,16 +21,16 @@ class LoginController extends Controller
 
         $user = $this->UsersModel->find_by('username', $username);
 
-        if ($user) {
+        if ($user && isset($user['password'])) {
 
             $password_correct = false;
 
-            // For hashed passwords
+            // Check hashed password
             if (password_verify($password, $user['password'])) {
                 $password_correct = true;
             }
 
-            // For existing plain-text passwords
+            // Check plain password used for this lab
             if ($password === $user['password']) {
                 $password_correct = true;
             }
@@ -41,7 +41,7 @@ class LoginController extends Controller
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['authenticated'] = true;
 
-                header('Location: http://127.0.0.1:3000/products');
+                header('Location: https://javier-chloei-lavalust.onrender.com/products');
                 exit;
             }
         }
@@ -57,7 +57,7 @@ class LoginController extends Controller
 
         session_destroy();
 
-        header('Location: http://127.0.0.1:3000/');
+        header('Location: https://javier-chloei-lavalust.onrender.com/');
         exit;
     }
 }
