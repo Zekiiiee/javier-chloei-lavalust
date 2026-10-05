@@ -257,7 +257,7 @@
         </div>
 
         <div>
-            <a href="http://127.0.0.1:3000/">
+            <a href="<?= base_url(); ?>">
                 Login
             </a>
         </div>
@@ -311,7 +311,7 @@
 
 
             <form
-                action="http://127.0.0.1:3000/login"
+                action="<?= base_url('login'); ?>"
                 method="POST"
             >
 

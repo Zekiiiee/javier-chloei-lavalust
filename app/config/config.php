@@ -79,8 +79,7 @@ $config['environment'] = getenv('APP_ENV') ?: 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url']    = 'https://javier-chloei-lavalust.onrender.com';
-
+$config['base_url'] = rtrim(getenv('APP_BASE_URL') ?: 'http://localhost/Lavalust/', '/') . '/';
 /*
 |--------------------------------------------------------------------------
 | Static File Proxies
@@ -263,7 +262,7 @@ $config['session_hmac_secret']     = getenv('APP_KEY') ?: '';
 $config['cookie_prefix']           = '';
 $config['cookie_domain']           = '';
 $config['cookie_path']             = '/';
-$config['cookie_secure']           = TRUE;
+$config['cookie_secure']           = (getenv('APP_ENV') ?: 'development') === 'production';
 $config['cookie_expiration']       = 86400;
 $config['cookie_httponly']         = FALSE;
 $config['cookie_samesite']         = 'Strict';

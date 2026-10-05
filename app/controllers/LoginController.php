@@ -16,7 +16,7 @@ class LoginController extends Controller
 
     public function login()
     {
-        $username = $_POST['username'] ?? '';
+        $username = trim($_POST['username'] ?? '');
         $password = $_POST['password'] ?? '';
 
         $user = $this->UsersModel->find_by('username', $username);
@@ -30,7 +30,7 @@ class LoginController extends Controller
                 $password_correct = true;
             }
 
-            // Check plain password used for this lab
+            // Check plain password
             if ($password === $user['password']) {
                 $password_correct = true;
             }
@@ -41,11 +41,13 @@ class LoginController extends Controller
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['authenticated'] = true;
 
-                header('Location: https://javier-chloei-lavalust.onrender.com/products');
+                // Successful login → Products
+                header('Location: ' . base_url('products'));
                 exit;
             }
         }
 
+        // Login failed
         $this->call->view('login', [
             'error' => 'Invalid username or password.'
         ]);
@@ -54,10 +56,9 @@ class LoginController extends Controller
     public function logout()
     {
         $_SESSION = [];
-
         session_destroy();
 
-        header('Location: https://javier-chloei-lavalust.onrender.com/');
+        header('Location: ' . base_url('login'));
         exit;
     }
 }

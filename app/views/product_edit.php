@@ -229,9 +229,9 @@
     </div>
 
     <div>
-        <a href="https://javier-chloei-lavalust.onrender.com/products">Products</a>
-        <a href="https://javier-chloei-lavalust.onrender.com/student">Home</a>
-        <a href="https://javier-chloei-lavalust.onrender.com/logout">Logout</a>
+        <a href="<?= base_url('products'); ?>">Products</a>
+        <a href="<?= base_url('student'); ?>">Home</a>
+        <a href="<?= base_url('logout'); ?>">Logout</a>
     </div>
 
 </nav>
@@ -257,7 +257,7 @@
         </div>
 
         <form
-            action="https://javier-chloei-lavalust.onrender.com/products/update/<?= $product['id']; ?>"
+            action="<?= base_url('products/update/' . $product['id']); ?>"
             method="POST"
         >
 
@@ -336,7 +336,7 @@
                 </button>
 
                 <a
-                    href="https://javier-chloei-lavalust.onrender.com/products"
+                    href="<?= base_url('products'); ?>"
                     class="btn secondary"
                 >
                     Cancel

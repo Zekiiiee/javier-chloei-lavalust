@@ -198,8 +198,9 @@ class Api
             header('Access-Control-Allow-Origin: *');
         }
 
-        header('Access-Control-Allow-Headers: Authorization, Content-Type, X-Requested-With, X-RateLimit-*');
+        header('Access-Control-Allow-Headers: Authorization, Content-Type, X-Requested-With, X-RateLimit-*, Access-Control-Request-Private-Network, Accept, Origin');
         header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        header('Access-Control-Allow-Private-Network: true');
         header('Access-Control-Max-Age: 3600');
         header('Content-Type: application/json; charset=UTF-8');
     }

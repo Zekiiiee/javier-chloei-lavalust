@@ -10,7 +10,7 @@ class ProductController extends Controller
 
         // Check if user is logged in
         if (empty($_SESSION['authenticated'])) {
-            header('Location: https://javier-chloei-lavalust.onrender.com/login');
+            header('Location: ' . base_url('login'));
             exit;
         }
     }
@@ -40,7 +40,7 @@ class ProductController extends Controller
 
         $this->ProductModel->insert($data);
 
-        header('Location: https://javier-chloei-lavalust.onrender.com/products');
+        header('Location: ' . base_url('products'));
         exit;
     }
 
@@ -49,7 +49,7 @@ class ProductController extends Controller
         $product = $this->ProductModel->find($id);
 
         if (!$product) {
-            header('Location: https://javier-chloei-lavalust.onrender.com/products');
+            header('Location: ' . base_url('products'));
             exit;
         }
 
@@ -69,7 +69,7 @@ class ProductController extends Controller
 
         $this->ProductModel->update($id, $data);
 
-        header('Location: https://javier-chloei-lavalust.onrender.com/products');
+        header('Location: ' . base_url('products'));
         exit;
     }
 
@@ -77,7 +77,7 @@ class ProductController extends Controller
     {
         $this->ProductModel->delete($id);
 
-        header('Location: https://javier-chloei-lavalust.onrender.com/products');
+        header('Location: ' . base_url('products'));
         exit;
     }
 }

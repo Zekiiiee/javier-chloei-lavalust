@@ -7,7 +7,7 @@ class AuthMiddleware
     {
         if (empty($_SESSION['authenticated'])) {
 
-            header('Location: http://127.0.0.1:3000/login');
+            header('Location: ' . base_url('login'));
             exit;
 
         }
