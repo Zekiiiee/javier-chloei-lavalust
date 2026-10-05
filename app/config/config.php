@@ -79,7 +79,10 @@ $config['environment'] = getenv('APP_ENV') ?: 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url'] = rtrim(getenv('APP_BASE_URL') ?: 'http://localhost/Lavalust/', '/') . '/';
+$default_base_url = (getenv('APP_ENV') ?: 'development') === 'production'
+    ? 'https://javier-chloei-lavalust.onrender.com/'
+    : 'http://localhost/Lavalust/';
+$config['base_url'] = rtrim(getenv('APP_BASE_URL') ?: $default_base_url, '/') . '/';
 /*
 |--------------------------------------------------------------------------
 | Static File Proxies
