@@ -38,10 +38,6 @@ $router->get('/products/delete/{id}', 'ProductController::delete')
 
        $router->get('/login', 'LoginController::index');
 
-$router->post('/login', 'LoginController::login');
-
-$router->get('/logout', 'LoginController::logout');
-
 // =============================================
 // API Routes — CORS OPTIONS Preflight
 // =============================================
